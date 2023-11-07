@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/styles.css" />
-    <title>Asohgram Home</title>
+    <title>Hero</title>
   </head>
   <body>
     <section class="block block--derk block--skewed-left hero">
@@ -23,7 +23,17 @@
           </p>
           <a href="" class="btn btn--accent btn--stretched">Get Started</a>
         </div>
-        <img class="hero__image" src="../images/banner.png" alt="" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="../images/banner.webp 1x, ../images/banner@2x.webp 2x"
+          />
+          <source
+            type="image/png"
+            srcset="../images/banner.png 1x, ../images/banner@2x.png 2x"
+          />
+          <img class="hero__image" src="../images/banner-main.png" alt="" />
+        </picture>
       </header>
     </section>
     <script src="../js/main.js"></script>
