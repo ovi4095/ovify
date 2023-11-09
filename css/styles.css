@@ -131,6 +131,7 @@ a{
 .list {
     list-style: none;
     padding-left: 0;
+
     
 }
 .list--inline .list__item{
@@ -192,13 +193,13 @@ a{
     font-size: 1.8rem;
     font-weight: 600;
     outline: 0;
-    padding: 2rem 3rem;
+    padding: 2rem 4vw;
     text-align: center;
     text-transform: uppercase;
     white-space: nowrap;
     transition: 0.15s;
 }
-.btn .icon {
+.btn .icon { 
     width: 2rem;
     height: 2rem;
     margin-right: 1rem;
@@ -273,6 +274,7 @@ a{
     border: 0;
     flex-grow: 1;
     padding: 1.5rem 2rem;
+    width: 0;
 }
 .input-group .btn {
     margin: 4px;
@@ -460,7 +462,12 @@ a{
         grid-template-columns: repeat(3, 1fr);
     }
 } */
-@media screen and (min-width: 768px) {
+/* @media screen and (max-width: 1023){
+    .grid--1x3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+} */
+@media screen and (min-width: 1024px) {
     .grid--1x3 {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -677,8 +684,9 @@ a{
     max-width: 67rem;
 }
 .block-domain__prices {
+    color: var(--color-headings);
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,6rem);
     font-size: 2rem;
     font-weight: 600;
@@ -693,7 +701,11 @@ a{
         grid-template-rows: repeat(1, 6rem);
     }
 }
-
+@media screen and (min-width: 375px) and (max-width: 767px){
+    .block-domain__prices {
+        grid-template-columns: repeat(3,1fr);   
+    }
+}
 /* Plans Block */
 .block-plans .grid {
     gap:8rem 4rem;
@@ -703,6 +715,7 @@ a{
     max-width: 50rem;
     margin: 0 auto;
 }
+
 
 /* Feature Block */
 
@@ -753,7 +766,7 @@ a{
 }
 .footer a {
     color: #777;
-    transform: color 0.3s;
+    transition:color 0.3s;
     font-size: 2rem;
 }
 .footer a:hover {
